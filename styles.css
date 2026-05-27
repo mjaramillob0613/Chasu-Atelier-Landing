@@ -819,6 +819,16 @@ h4 {
         grid-template-columns: 1fr;
     }
 
+    .carousel-slide img {
+        height: auto;
+        aspect-ratio: 3/4;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 32px;
