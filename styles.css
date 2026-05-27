@@ -276,6 +276,28 @@ h4 {
     overflow: hidden;
 }
 
+.hero-decoration {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.hero-decoration img {
+    max-height: 500px;
+    width: auto;
+}
+
+.hero-decoration-left {
+    left: -20px;
+}
+
+.hero-decoration-right {
+    right: -20px;
+    transform: translateY(-50%) scaleX(-1);
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -827,6 +849,10 @@ h4 {
     .carousel-btn {
         width: 36px;
         height: 36px;
+    }
+
+    .hero-decoration {
+        display: none;
     }
 
     .footer-content {
