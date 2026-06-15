@@ -276,26 +276,29 @@ h4 {
     overflow: hidden;
 }
 
-.hero-decoration {
+.hero::before {
+    display: none;
+}
+
+.hero-bg-image {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 0;
     pointer-events: none;
 }
 
-.hero-decoration img {
-    max-height: 500px;
-    width: auto;
+.hero-decoration {
+    display: none;
 }
 
-.hero-decoration-left {
-    left: -20px;
-}
-
+.hero-decoration-left,
 .hero-decoration-right {
-    right: -20px;
-    transform: translateY(-50%) scaleX(-1);
+    display: none;
 }
 
 .hero::before {
@@ -311,15 +314,7 @@ h4 {
 }
 
 .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--sky-blue) 0%, transparent 70%);
-    opacity: 0.5;
+    display: none;
 }
 
 .hero-content {
