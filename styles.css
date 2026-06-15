@@ -582,32 +582,46 @@ h4 {
     background-color: var(--white);
 }
 
-.shop-coming-soon {
-    text-align: center;
-    padding: 60px 40px;
-    background: linear-gradient(135deg, var(--pale-pink) 0%, var(--beige) 100%);
-    border-radius: var(--radius);
-    max-width: 600px;
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.shop-icon {
-    color: var(--navy);
-    opacity: 0.5;
-    margin-bottom: 24px;
+.shop-card {
+    background-color: var(--beige);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 
-.shop-coming-soon h3 {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
+.shop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
-.shop-coming-soon p {
+.shop-card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.shop-card-info {
+    padding: 24px;
+    text-align: center;
+}
+
+.shop-card-info h3 {
+    margin-bottom: 12px;
+}
+
+.shop-card-info p {
     color: var(--text-light);
-    margin-bottom: 32px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
 
 /* ===== Contact Section ===== */
