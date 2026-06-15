@@ -121,6 +121,43 @@
     color: var(--navy);
 }
 
+/* Tutorial Help CTA */
+.tutorial-help {
+    margin-top: 60px;
+    padding: 48px 40px;
+    background: linear-gradient(135deg, var(--pale-pink) 0%, var(--beige) 100%);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(47, 72, 88, 0.08);
+}
+
+.tutorial-help h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #2F4858;
+}
+
+.tutorial-help p {
+    color: #5a7184;
+    max-width: 550px;
+    margin: 0 auto 32px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tutorial-help-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tutorial-help-buttons .btn {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .tutorials-grid {
