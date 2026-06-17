@@ -1,17 +1,16 @@
 /* ===== CSS Variables - Paleta Chasu Atelier ===== */
 :root {
+    --rosa-suave: #F6C6D3;
     --lavender: #D8C8D9;
-    --peach: #F2C5B4;
     --beige: #F2EBE5;
-    --sage: #C5D1C5;
-    --butter: #FDF0D5;
+    --fucsia: #E56B9A;
     --charcoal: #4F4F4F;
-    --navy: #2F4858;
     --white: #FFFFFF;
     --text-dark: #4F4F4F;
     --text-light: #6b6b6b;
-    --font-heading: 'Cormorant Garamond', serif;
+    --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
+    --font-accent: 'Caveat', cursive;
     --shadow-sm: 0 2px 8px rgba(79, 79, 79, 0.08);
     --shadow-md: 0 4px 16px rgba(79, 79, 79, 0.12);
     --shadow-lg: 0 8px 32px rgba(79, 79, 79, 0.16);
@@ -118,12 +117,12 @@ h4 {
 }
 
 .btn-primary {
-    background-color: var(--charcoal);
+    background-color: var(--fucsia);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background-color: #3a3a3a;
+    background-color: #d15a87;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -141,14 +140,14 @@ h4 {
 }
 
 .btn-download {
-    background-color: var(--peach);
+    background-color: var(--rosa-suave);
     color: var(--charcoal);
     padding: 10px 24px;
     font-size: 0.85rem;
 }
 
 .btn-download:hover {
-    background-color: var(--charcoal);
+    background-color: var(--fucsia);
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);
@@ -220,7 +219,7 @@ h4 {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--peach);
+    background-color: var(--rosa-suave);
     transition: var(--transition);
 }
 
@@ -242,7 +241,7 @@ h4 {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--navy);
+    background-color: var(--charcoal);
     transition: var(--transition);
 }
 
@@ -273,13 +272,9 @@ h4 {
     justify-content: center;
     text-align: center;
     padding: 120px 24px 80px;
-    background: linear-gradient(135deg, var(--beige) 0%, var(--peach) 50%, var(--lavender) 100%);
+    background: linear-gradient(135deg, var(--beige) 0%, var(--rosa-suave) 50%, var(--lavender) 100%);
     position: relative;
     overflow: hidden;
-}
-
-.hero::before {
-    display: none;
 }
 
 .hero-bg-image {
@@ -294,31 +289,6 @@ h4 {
     pointer-events: none;
 }
 
-.hero-decoration {
-    display: none;
-}
-
-.hero-decoration-left,
-.hero-decoration-right {
-    display: none;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--azalea) 0%, transparent 70%);
-    opacity: 0.4;
-}
-
-.hero::after {
-    display: none;
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
@@ -327,21 +297,23 @@ h4 {
 
 .hero-content h1 {
     margin-bottom: 24px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
-.hero-content h1 em {
-    font-style: italic;
-    color: var(--navy);
-    opacity: 0.8;
+.hero-content h1 .texto-decorativo {
+    color: var(--fucsia);
+    font-style: normal;
 }
 
 .hero-content p {
-    font-size: 1.15rem;
-    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
     margin-bottom: 40px;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
 }
 
 .hero-buttons {
@@ -349,6 +321,29 @@ h4 {
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1.5px solid var(--charcoal);
+    background: transparent;
+    color: var(--charcoal);
+}
+
+.btn-ghost:hover {
+    background-color: var(--charcoal);
+    color: var(--white);
+    transform: translateY(-2px);
 }
 
 /* ===== Sections ===== */
@@ -415,12 +410,12 @@ h4 {
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
-    color: var(--navy);
+    color: var(--charcoal);
     flex-shrink: 0;
 }
 
 .carousel-btn:hover {
-    background-color: var(--navy);
+    background-color: var(--charcoal);
     color: var(--white);
     transform: scale(1.1);
 }
@@ -436,7 +431,7 @@ h4 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--sage);
+    background-color: var(--lavender);
     border: none;
     cursor: pointer;
     transition: var(--transition);
@@ -542,7 +537,7 @@ h4 {
 }
 
 .pattern-image {
-    background: linear-gradient(135deg, var(--peach), var(--lavender));
+    background: linear-gradient(135deg, var(--rosa-suave), var(--lavender));
     padding: 0;
     display: flex;
     align-items: center;
@@ -557,7 +552,7 @@ h4 {
 }
 
 .pattern-placeholder {
-    color: var(--navy);
+    color: var(--charcoal);
     opacity: 0.6;
 }
 
@@ -580,7 +575,7 @@ h4 {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--charcoal);
-    background-color: var(--sage);
+    background-color: var(--lavender);
     padding: 4px 12px;
     border-radius: 20px;
     margin-bottom: 16px;
@@ -663,7 +658,7 @@ h4 {
 
 .contact-item svg {
     flex-shrink: 0;
-    color: var(--navy);
+    color: var(--charcoal);
 }
 
 .contact-item a {
@@ -671,7 +666,7 @@ h4 {
 }
 
 .contact-item a:hover {
-    color: var(--navy);
+    color: var(--charcoal);
     text-decoration: underline;
 }
 
@@ -693,7 +688,7 @@ h4 {
     flex: 1;
     min-width: 250px;
     padding: 14px 24px;
-    border: 2px solid var(--sage);
+    border: 2px solid var(--lavender);
     border-radius: 50px;
     font-family: var(--font-body);
     font-size: 0.9rem;
@@ -704,7 +699,7 @@ h4 {
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--navy);
+    border-color: var(--charcoal);
     box-shadow: 0 0 0 3px rgba(47, 72, 88, 0.1);
 }
 
@@ -715,7 +710,7 @@ h4 {
 
 /* ===== Footer ===== */
 .footer {
-    background-color: var(--sage);
+    background-color: var(--lavender);
     color: var(--charcoal);
     padding: 60px 0 24px;
 }
